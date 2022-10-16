@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.section-one{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./assets/background.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: flex-start;
+
+}
+.content{
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    margin: 28% 0 0px 7%;
+
+}
+.content h1{
+    background: linear-gradient(85deg, red,yellow,#56ff00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.button{
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.logo{
+    width: 95px;
+    height: auto;
+}
+nav{
+    color: white;
+    padding: 20px;
+}
+
+nav li{
+    list-style: none;
+    position: relative;
+}
+ li::before{
+    content: "";
+    width: 50px;
+    height: 5px;
+    color: white;
+    background-color: yellow;
+    position: absolute;
+    bottom: -6px;
+    border-radius: 10px;
+}
+nav ul{
+    gap: 25px;
+    column-gap: 70px;
+    height: fit-content;
+    padding: 10px;
+}
+
+.lantern{
+    width: 90px;
+    z-index: 0;
+    position: relative;
+    animation: float 7s infinite linear ;
+}
+
+.lanterns{
+    display: flex;
+    position: absolute;
+    bottom: -200px;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 96%;
+}
+
+
+@keyframes float {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+        }
+    75%{
+        opacity: 1;
+            }
+    90%{
+        opacity: 1;
+        }
+    
+    100%{
+        transform: translateY(-90vh);
+        opacity: 0;
+    }
+}
+
+.lanterns .lantern:nth-child(1){
+    width: 100px;
+    height: auto;
+    animation-delay: 2s;
+}
+
+.lanterns .lantern:nth-child(2){
+    width: 70px;
+    height: auto;
+    animation-delay: 3.1s;
+    z-index: -1;
+
+
+
+}
+.lanterns .lantern:nth-child(3){
+    height: auto;
+    width: 160px;
+    position: absolute;
+    animation-delay: 6s;
+
+    
+}
+.lanterns .lantern:nth-child(4){
+    height: auto;
+    width: 80px;
+    animation-delay: 0.2s;
+
+}
+.lanterns .lantern:nth-child(5){
+    height: auto;
+    width: 60px;
+    animation-delay: 0s;
+
+}
+.lanterns .lantern:nth-child(6){
+    height: auto;
+    width: 40px;
+    animation-delay: 5s;
+    right: 10px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .content{
+        margin: 4vh 0 0 13%;
+    }
+}
